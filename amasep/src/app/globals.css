@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #050505;
+  --color-secondary: #0A0A0A;
+  --color-surface: #121212;
+  --color-primary-text: #FFFFFF;
+  --color-secondary-text: #B8B8B8;
+  --color-accent: #9EFF00;
+  --color-success: #00E676;
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-space-grotesk);
+}
+
+@layer base {
+  html {
+    background: var(--color-background);
+    color: var(--color-primary-text);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-primary-text);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(158, 255, 0, 0.2);
+    color: var(--color-primary-text);
+  }
+}
+
+@layer utilities {
+  .text-accent {
+    color: var(--color-accent);
+  }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+  .text-secondary {
+    color: var(--color-secondary-text);
+  }
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+}
